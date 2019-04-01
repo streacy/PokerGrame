@@ -16,15 +16,33 @@ import java.util.*;
  *
  * @author stephanietreacy
  */
-public class House {
+public class House{
     private ServerSocket serverSocket;
     private Socket s;
     private PrintWriter out;
     private BufferedReader in;
     private Thread[] playerList = new Thread[5];
     private int count = -1;
+    private static House house = null;
+    
+    private House(){
+        System.out.println("House created\n");
+    }
+    
+    public static House getHouse(){
+        
+     if(house == null){
+         
+         house = new House();
+     }
+     
+     return house;
+    }    
+    
+    
  
     public void start(int port) throws IOException {
+        
         serverSocket = new ServerSocket(port);
        
         while(true){
@@ -32,6 +50,7 @@ public class House {
             try{
                 if (count == 4) {
                     System.out.println("To many players playing");
+         
                     continue;
                 }
                 s = serverSocket.accept();
@@ -53,7 +72,6 @@ public class House {
                 s.close();
                 e.printStackTrace();
             }
-            playerList[0].sendMessage("Hello player 0 it is your turn"); 
        
         }
     }
@@ -65,7 +83,7 @@ public class House {
         serverSocket.close();
     }
     public static void main(String[] args) throws IOException {
-        House server=new House();
+        House server= House.getHouse();
         server.start(6789);
     }
 }
