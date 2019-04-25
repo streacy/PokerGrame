@@ -2,6 +2,7 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group>
             <file>file:/Users/stephanietreacy/NetBeansProjects/pokerGame/src/pokergame/CardDealer.java</file>
             <file>file:/Users/stephanietreacy/NetBeansProjects/pokerGame/src/pokergame/clientThread.java</file>
@@ -9,5 +10,8 @@
             <file>file:/Users/stephanietreacy/NetBeansProjects/pokerGame/src/pokergame/Player.java</file>
             <file>file:/Users/stephanietreacy/NetBeansProjects/pokerGame/src/pokergame/Card.java</file>
         </group>
+=======
+        <group/>
+>>>>>>> 72bff84a4239a7d3395f383f1d95c84cac3f2356
     </open-files>
 </project-private>
